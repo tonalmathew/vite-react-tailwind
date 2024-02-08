@@ -1,9 +1,17 @@
 #!/usr/bin/env node
 
-const { program } = require("commander");
-const { exec } = require("shelljs");
-const fs = require("fs-extra");
-const path = require("path");
+import { Command } from 'commander';
+import pkg from 'shelljs';
+import fs from "fs-extra"
+import path, { dirname } from 'node:path'
+import ora from 'ora';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const program = new Command
+const { exec } = pkg;
 
 program
   .command("create <project-name>")
@@ -17,6 +25,13 @@ program
       `cd ${projectName} && npm install -D tailwindcss@latest postcss@latest autoprefixer@latest`
     );
     exec(`cd ${projectName} && npx tailwindcss init -p`);
+
+    // const spinner = ora('Loading unicorns').start();
+
+    // setTimeout(() => {
+    //   spinner.color = 'yellow';
+    //   spinner.text = 'Loading rainbows';
+    // }, 1000);
 
     // project and template folder path
     const projectPath = path.join(process.cwd(), projectName);
