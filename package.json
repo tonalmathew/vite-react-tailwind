@@ -1,9 +1,10 @@
 {
   "name": "vireta",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "vite + react + tailwind (vi-re-ta)",
   "main": "cli.js",
   "type": "module",
+  "repository": "tonalmathew/vireta",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,13 +20,15 @@
   "bin": {
     "vireta": "cli.js"
   },
-  "author": "",
+  "author": {
+    "name": "Tonal Mathew",
+    "email": "tonalmathew.dev@gmail.com",
+    "url": "https://github.com/tonalmathew"
+  },
   "license": "MIT",
   "dependencies": {
-    "chalk": "^5.3.0",
     "commander": "^12.0.0",
     "fs-extra": "^11.2.0",
-    "ora": "^8.0.1",
-    "shelljs": "^0.8.5"
+    "ora": "^8.0.1"
   }
 }
