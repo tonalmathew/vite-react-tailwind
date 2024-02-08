@@ -12,7 +12,7 @@ program
     console.log(
       `Creating Vite + React project with Tailwind CSS: ${projectName}`
     );
-    exec(`npm init vite@latest ${projectName} -- --template react`);
+    exec(`npm create vite@latest ${projectName} -- --template react`);
     exec(
       `cd ${projectName} && npm install -D tailwindcss@latest postcss@latest autoprefixer@latest`
     );
