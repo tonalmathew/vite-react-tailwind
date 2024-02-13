@@ -1,4 +1,5 @@
 # Vireta
+> Vite+React+Tailwind (vi-re-ta)
 
 Vireta is a command-line tool for creating Vite + React projects with Tailwind CSS. It provides an easy and convenient way to set up new projects with the necessary dependencies and configurations.
 
